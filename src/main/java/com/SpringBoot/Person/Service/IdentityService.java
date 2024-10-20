@@ -31,7 +31,7 @@ public class IdentityService {
 
     public Identity createIdentity(Identity identity, Long personId){
         Person person = personRepository.findById(personId).orElse(new Person());
-        identity.setPerson(person);
+        identity.setPerson(person);   // SanjeevSK
         return identityRepository.save(identity);
     }
 
